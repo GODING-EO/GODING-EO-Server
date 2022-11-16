@@ -4,7 +4,6 @@ import kr.co.godingeo.domain.school.utils.SchoolUtil;
 import kr.co.godingeo.domain.school.presentation.dto.response.QuerySchoolResponse;
 import kr.co.godingeo.domain.school.presentation.dto.response.QuerySchoolResponse.SchoolInformation;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -17,8 +16,8 @@ public class QuerySchoolNameService {
     private final SchoolUtil schoolUtil;
 
     @Transactional
-    public QuerySchoolResponse execute(String name, Pageable pageable) {
-        return new QuerySchoolResponse(schoolUtil.getSchoolByName(name, pageable)
+    public QuerySchoolResponse execute(String name) {
+        return new QuerySchoolResponse(schoolUtil.getSchoolByName(name)
                 .stream()
                 .map(school -> new SchoolInformation(school.getCode(), school.getName(),
                         school.getType(), school.getLocation(), school.getAdress(),

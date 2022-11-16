@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface SchoolRepository extends CrudRepository<School, String> {
 
     Optional<School> findByCode(String code);
-    Page<School> findByNameContaining(String name, Pageable pageable);
+    List<School> findByNameContaining(String name);
 
-    Page<School> findByDivisionContaining(String division, Pageable pageable);
+    List<School> findByDivisionContaining(String division);
 }
