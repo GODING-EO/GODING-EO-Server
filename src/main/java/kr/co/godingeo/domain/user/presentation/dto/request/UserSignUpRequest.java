@@ -29,5 +29,4 @@ public class UserSignUpRequest {
     @NotBlank(message = "job은 Null, 공백, 띄어쓰기를 허용하지 않습니다.")
     private String job;
 
-    private Integer grade;
 }

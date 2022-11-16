@@ -35,7 +35,6 @@ public class UserSignUpService {
                 .name(request.getName())
                 .job(request.getJob())
                 .role(UserRole.USER)
-                .grade(request.getGrade())
                 .build());
 
         String accessToken = jwtTokenProvider.generateAccessToken(user.getAccountId(), user.getId());

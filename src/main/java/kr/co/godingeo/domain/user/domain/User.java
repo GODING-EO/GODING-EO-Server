@@ -1,6 +1,5 @@
 package kr.co.godingeo.domain.user.domain;
 
-import kr.co.godingeo.global.entity.BaseEntity;
 import kr.co.godingeo.global.enums.UserRole;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -37,21 +36,17 @@ public class User {
     @Size(max = 11)
     private String job;
 
-    @Column
-    private Integer grade;
-
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(length = 5)
     private UserRole role;
 
     @Builder
-    public User(String accountId, String password, String name, String job, Integer grade, UserRole role) {
+    public User(String accountId, String password, String name, String job, UserRole role) {
         this.accountId = accountId;
         this.password = password;
         this.name = name;
         this.job = job;
-        this.grade = grade;
         this.role = role;
     }
     
