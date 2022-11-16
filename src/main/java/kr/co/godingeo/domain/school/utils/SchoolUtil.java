@@ -21,12 +21,12 @@ public class SchoolUtil {
                 .orElseThrow(() -> SchoolNotFoundException.EXCEPTION);
     }
 
-    public Page<School> getSchoolByName(String name, Pageable pageable) {
-        return schoolRepository.findByNameContaining(name, pageable);
+    public List<School> getSchoolByName(String name) {
+        return schoolRepository.findByNameContaining(name);
     }
 
-    public Page<School> getSchoolByDivision(String division, Pageable pageable) {
-        return schoolRepository.findByDivisionContaining(division, pageable);
+    public List<School> getSchoolByDivision(String division) {
+        return schoolRepository.findByDivisionContaining(division);
     }
 
 }
