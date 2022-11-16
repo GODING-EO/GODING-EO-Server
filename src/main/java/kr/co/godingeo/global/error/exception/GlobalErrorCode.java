@@ -19,6 +19,7 @@ public enum GlobalErrorCode {
 
     // 404
     USER_NOT_FOUND(404, "User Not Found"),
+    SCHOOL_NOT_FOUND(404, "School Not Found"),
     REFRESH_TOKEN_NOT_FOUND(404, "RefreshToken Not Found"),
 
     // 409
