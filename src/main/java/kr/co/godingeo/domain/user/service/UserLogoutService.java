@@ -13,8 +13,7 @@ import javax.transaction.Transactional;
 @RequiredArgsConstructor
 @Service
 public class UserLogoutService {
-
-
+    
     private final UserUtil userUtil;
     private final RefreshTokenRepository refreshTokenRepository;
 
