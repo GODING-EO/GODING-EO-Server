@@ -19,7 +19,7 @@ public class QuerySchoolDivisionService {
     public QuerySchoolResponse execute(String division) {
         return new QuerySchoolResponse(schoolUtil.getSchoolByDivision(division)
                 .stream()
-                .map(school -> new QuerySchoolResponse.SchoolInformation(school.getCode(), school.getName(),
+                .map(school -> new QuerySchoolResponse.SchoolInformation(school.getId(), school.getName(),
                         school.getType(), school.getLocation(), school.getAdress(),
                         school.getPhone(), school.getUrl(), school.getDivision()))
                 .collect(Collectors.toList()));

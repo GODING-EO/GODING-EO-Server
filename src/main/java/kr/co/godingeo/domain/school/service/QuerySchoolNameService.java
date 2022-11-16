@@ -19,7 +19,7 @@ public class QuerySchoolNameService {
     public QuerySchoolResponse execute(String name) {
         return new QuerySchoolResponse(schoolUtil.getSchoolByName(name)
                 .stream()
-                .map(school -> new SchoolInformation(school.getCode(), school.getName(),
+                .map(school -> new SchoolInformation(school.getId(), school.getName(),
                         school.getType(), school.getLocation(), school.getAdress(),
                         school.getPhone(), school.getUrl(), school.getDivision()))
                 .collect(Collectors.toList()));

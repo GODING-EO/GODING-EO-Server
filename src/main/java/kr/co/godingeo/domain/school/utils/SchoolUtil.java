@@ -16,11 +16,6 @@ public class SchoolUtil {
 
     private final SchoolRepository schoolRepository;
 
-    public School getSchoolByCode(String code) {
-        return schoolRepository.findById(code)
-                .orElseThrow(() -> SchoolNotFoundException.EXCEPTION);
-    }
-
     public List<School> getSchoolByName(String name) {
         return schoolRepository.findByNameContaining(name);
     }

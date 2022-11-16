@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface SchoolRepository extends CrudRepository<School, String> {
+public interface SchoolRepository extends CrudRepository<School, Long> {
 
-    Optional<School> findByCode(String code);
     List<School> findByNameContaining(String name);
 
     List<School> findByDivisionContaining(String division);

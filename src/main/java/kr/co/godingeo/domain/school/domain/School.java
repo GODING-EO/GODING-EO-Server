@@ -12,8 +12,8 @@ import javax.persistence.*;
 public class School {
 
     @Id
-    @Column(length = 7, nullable = false)
-    private String code;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
 
     @Column(length = 30, nullable = false)
     private String name;
