@@ -47,6 +47,10 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.DELETE, "/users/logout").authenticated()
                 .antMatchers(HttpMethod.DELETE, "/users/leave").authenticated()
 
+                // schools
+                .antMatchers(HttpMethod.GET, "/schools/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/schools/bookmark/**").authenticated()
+
                 .anyRequest().denyAll()
 
                 .and()
