@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 public class UserSignUpRequest {
 
     @NotBlank(message = "account_id는 Null, 공백, 띄어쓰기를 허용하지 않습니다.")
-    @Size(min = 5, max = 20, message = "account_id는 20글자 이하여야 합니다.")
+    @Size(min = 5, max = 20, message = "account_id는 5글자 이상 20글자 이하여야 합니다.")
     private String accountId;
 
     @NotBlank(message = "password는 Null, 공백, 띄어쓰기를 허용하지 않습니다.")
