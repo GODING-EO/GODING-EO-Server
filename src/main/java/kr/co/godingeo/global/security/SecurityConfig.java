@@ -49,7 +49,6 @@ public class SecurityConfig {
 
                 // schools
                 .antMatchers(HttpMethod.GET, "/schools/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/schools/bookmark/**").authenticated()
 
                 .anyRequest().denyAll()
 
