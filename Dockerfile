@@ -1,7 +1,7 @@
 FROM openjdk:11-jre-slim
 EXPOSE 8080
 COPY ./build/libs/*.jar app.jar
-COPY application.yml /src/main/resources/application.yml
+COPY application.yml src/main/resources/application.yml
 
 ARG JDBC_URL
 ARG DB_USER
