@@ -2,7 +2,6 @@ package kr.co.godingeo.domain.auth.presentation;
 
 
 import kr.co.godingeo.domain.auth.presentation.dto.request.UserSignInRequest;
-import kr.co.godingeo.domain.auth.presentation.dto.response.UserTokenRefreshResponse;
 import kr.co.godingeo.domain.auth.presentation.dto.response.UserTokenResponse;
 import kr.co.godingeo.domain.auth.service.UserSignInService;
 import lombok.RequiredArgsConstructor;
