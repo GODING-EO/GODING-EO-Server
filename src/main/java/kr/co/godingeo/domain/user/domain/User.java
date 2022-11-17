@@ -1,5 +1,6 @@
 package kr.co.godingeo.domain.user.domain;
 
+import kr.co.godingeo.domain.user.presentation.dto.request.UpdateUserInfoRequest;
 import kr.co.godingeo.global.enums.UserRole;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -48,6 +49,19 @@ public class User {
         this.name = name;
         this.job = job;
         this.role = role;
+    }
+
+    public void changePassword(String password) {
+        this.password = password;
+    }
+
+    public void updateUser(UpdateUserInfoRequest request) {
+        this.name = request.getName();
+        this.job = request.getJob();
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
