@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
 	// mysql
-	implementation 'mysql:mysql-connector-java:8.0.28'
+	implementation 'mysql:mysql-connector-java:8.0.30'
 
 	// validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
