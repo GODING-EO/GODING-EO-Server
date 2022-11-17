@@ -10,4 +10,4 @@ ENV DB_USER=${DB_USER}
 ENV DB_PASSWORD=${DB_PWD}
 ENV JWT_SECRET_KEY=${JWT_SECRET_KEY}
 
-ENTRYPOINT ["java","-jar","-Dspring.datasource.url=${JDBC_URL}","-Dspring.datasource.username=${DB_USER}", "-Dspring.jwt.secret-key=${JWT_SECRET_KEY}", "/app.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.datasource.url=${JDBC_URL}","-Dspring.datasource.username=${DB_USER}", "-Dspring.datasource.password=${DB_PWD}", "-Dspring.jwt.secret-key=${JWT_SECRET_KEY}", "/app.jar"]
