@@ -42,8 +42,13 @@ public class SecurityConfig {
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
 
                 // users
+                .antMatchers(HttpMethod.GET, "/users").authenticated()
+                .antMatchers(HttpMethod.GET, "/users/info").authenticated()
+                .antMatchers(HttpMethod.GET, "/users/{user-id}").authenticated()
                 .antMatchers(HttpMethod.POST, "/users").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/token").permitAll()
+                .antMatchers(HttpMethod.PATCH, "/users").authenticated()
+                .antMatchers(HttpMethod.PATCH, "/users/password").authenticated()
                 .antMatchers(HttpMethod.DELETE, "/users/logout").authenticated()
                 .antMatchers(HttpMethod.DELETE, "/users/leave").authenticated()
 
