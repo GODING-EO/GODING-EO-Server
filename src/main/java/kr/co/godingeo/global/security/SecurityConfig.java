@@ -55,6 +55,9 @@ public class SecurityConfig {
                 // schools
                 .antMatchers(HttpMethod.GET, "/schools/**").permitAll()
 
+                // swagger
+                .antMatchers("/swagger*/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**").permitAll()
+
                 .anyRequest().denyAll()
 
                 .and()
