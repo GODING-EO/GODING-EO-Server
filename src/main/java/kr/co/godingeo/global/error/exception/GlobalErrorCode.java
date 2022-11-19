@@ -24,6 +24,7 @@ public enum GlobalErrorCode {
 
     // 409
     ALREADY_USER_EXIST(409, "Already User Exist"),
+    ALREADY_USER_NAME_EXIST(409, "Already User Name Exist"),
 
     // 500
     INTERNAL_SERVER_ERROR(500, "Internal Server Error");
