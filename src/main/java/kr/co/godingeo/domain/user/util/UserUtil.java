@@ -3,6 +3,7 @@ package kr.co.godingeo.domain.user.util;
 import kr.co.godingeo.domain.user.domain.User;
 import kr.co.godingeo.domain.user.domain.repository.UserRepository;
 import kr.co.godingeo.domain.user.exception.AlreadyUserExistException;
+import kr.co.godingeo.domain.user.exception.AlreadyUserNameExistException;
 import kr.co.godingeo.global.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -32,6 +33,12 @@ public class UserUtil {
     public void checkUserExists(String accountId) {
         if (userRepository.findByAccountId(accountId).isPresent()) {
             throw AlreadyUserExistException.EXCEPTION;
+        }
+    }
+
+    public void checkUserNameExists(String name) {
+        if (userRepository.findByName(name).isPresent()) {
+            throw AlreadyUserNameExistException.EXCEPTION;
         }
     }
 }
