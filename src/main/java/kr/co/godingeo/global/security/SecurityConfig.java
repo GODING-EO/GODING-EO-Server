@@ -54,8 +54,7 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.DELETE, "/users/leave").authenticated()
 
                 // schools
-                .antMatchers(HttpMethod.HEAD, "/schools/name").permitAll()
-                .antMatchers(HttpMethod.HEAD, "/schools/division").permitAll()
+                .antMatchers(HttpMethod.GET, "/schools/**").permitAll()
 
                 // swagger
                 .antMatchers("/swagger*/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**").permitAll()
