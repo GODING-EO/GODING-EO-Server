@@ -6,13 +6,12 @@ import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
-public class CheckUserNameExistsService {
-
+public class CheckAccountIdExistsService {
 
     private final UserUtil userUtil;
 
-    public void execute(String name) {
-        userUtil.checkUserNameExists(name);
+    public void execute(String accountId) {
+        userUtil.checkUserExists(accountId);
     }
 
 }
