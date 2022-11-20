@@ -18,13 +18,13 @@ public class SchoolController {
     private final QuerySchoolDivisionService querySchoolDivisionService;
 
     @ApiOperation(value = "이름으로 학교 찾기")
-    @RequestMapping(value = "/name", method = RequestMethod.HEAD)
+    @GetMapping("/name")
     public QuerySchoolResponse querySchoolName(@RequestParam("where") String name) {
         return querySchoolNameService.execute(name);
     }
 
     @ApiOperation(value = "학교 종류로 학교 찾기[일반고, 특목고, 특성화고, 자율고]")
-    @RequestMapping(value = "/division", method = RequestMethod.HEAD)
+    @GetMapping("/division")
     public QuerySchoolResponse querySchoolDivision(@RequestParam("where") String division) {
         return querySchoolDivisionService.execute(division);
     }
