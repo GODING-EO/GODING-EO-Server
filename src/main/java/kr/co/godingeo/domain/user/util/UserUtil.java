@@ -36,9 +36,4 @@ public class UserUtil {
         }
     }
 
-    public void checkUserNameExists(String name) {
-        if (userRepository.findByName(name).isPresent()) {
-            throw AlreadyUserNameExistException.EXCEPTION;
-        }
-    }
 }
