@@ -42,6 +42,7 @@ public class SecurityConfig {
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
 
                 // users
+                .antMatchers(HttpMethod.HEAD, "/users/account-id").permitAll()
                 .antMatchers(HttpMethod.GET, "/users").authenticated()
                 .antMatchers(HttpMethod.GET, "/users/info").authenticated()
                 .antMatchers(HttpMethod.GET, "/users/{user-id}").authenticated()
@@ -53,7 +54,8 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.DELETE, "/users/leave").authenticated()
 
                 // schools
-                .antMatchers(HttpMethod.GET, "/schools/**").permitAll()
+                .antMatchers(HttpMethod.HEAD, "/schools/name").permitAll()
+                .antMatchers(HttpMethod.HEAD, "/schools/division").permitAll()
 
                 // swagger
                 .antMatchers("/swagger*/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**").permitAll()
