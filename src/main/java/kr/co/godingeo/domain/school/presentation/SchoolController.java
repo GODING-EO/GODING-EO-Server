@@ -22,7 +22,6 @@ public class SchoolController {
     public QuerySchoolResponse querySchoolName(@RequestParam("where") String name) {
         return querySchoolNameService.execute(name);
     }
-
     @ApiOperation(value = "학교 종류로 학교 찾기[일반고, 특목고, 특성화고, 자율고]")
     @GetMapping("/division")
     public QuerySchoolResponse querySchoolDivision(@RequestParam("where") String division) {

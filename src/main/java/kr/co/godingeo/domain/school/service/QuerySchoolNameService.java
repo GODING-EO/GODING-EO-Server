@@ -21,7 +21,7 @@ public class QuerySchoolNameService {
                 .stream()
                 .map(school -> new SchoolInformation(school.getId(), school.getName(),
                         school.getType(), school.getLocation(), school.getAdress(),
-                        school.getPhone(), school.getUrl(), school.getDivision()))
+                        school.getPhone(), school.getUrl(), school.getDivision(), school.getImageUrl()))
                 .collect(Collectors.toList()));
     }
 

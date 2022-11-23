@@ -22,6 +22,7 @@ public class QuerySchoolResponse {
         private final String phone;
         private final String url;
         private final String division;
+        private final String imageUrl;
     }
 
 }

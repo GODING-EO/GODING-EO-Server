@@ -36,4 +36,7 @@ public class School {
     @Column(length = 50, nullable = false)
     private String division;
 
+    @Column(nullable = false)
+    private String imageUrl;
+
 }
